@@ -1,4 +1,6 @@
-### Steps to run (for English using coNLL dataset)
+### Steps to run (for English using coNLL dataset, tested on TF 1.4)
+
+#### (Same model should work for Hindi provided you have the dataset and transliterate it to Latin script and then pass to the model)
 
 1. Copy the glove.6B.50d.txt to embeddings folder (50 dimensional glove vectors. Can use other dimensions too)  
 [Download link](http://nlp.stanford.edu/data/glove.6B.zip)
@@ -29,5 +31,3 @@ This should have generated an embed and a tag pickle (.pkl) files in embeddings 
 Sentence length should be the resized length that we set above or max sentence length in our dataset  
 Class size should be the number of output tags (5 in case of coNLL - I-PER, I-LOC, I-ORG, I-MISC, O)  
    **python model.py --word_dim 61 --sentence_length 500 --class_size 5 --batch_size 256**
-
-##### Same model should work for Hindi provided you have the dataset and transliterate it to Latin script and then pass to the model
